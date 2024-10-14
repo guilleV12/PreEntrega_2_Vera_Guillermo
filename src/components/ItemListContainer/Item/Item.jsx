@@ -1,19 +1,19 @@
 import React from 'react'
-import './itemlistcontainer.css'
+import '../itemlistcontainer.css'
 
-const ItemListView = ({ juego }) => {
+const Item = ({ juego }) => {
   
   return (
-    <>
+    <div className="item-container">
       <img className='img-catalogo' src={juego.src} alt="" />
       <h4 className='img-catalogo-titulo'>{juego.nombre}</h4>
       <h5 className='img-catalogo-categoria'>{`Categorias: ${juego.categoria}.`}</h5>
       <h5 className='img-catalogo-precio'>{`Precio: $${juego.precio}`}</h5>
-      <div className="btn-catalogo-comprar-container">
-        <button className='btn-catalogo-comprar'>Comprar</button>
-      </div>
-    </>
+      <button className='btn-ver-mas'>
+        <h4>Ver mas +</h4>
+      </button>
+    </div>
   )
 }
 
-export default ItemListView
+export default Item

@@ -1,5 +1,6 @@
-header{
+.header{
   position: fixed;
+  top: 0;
   display: flex;
   width: 100%;
   height: 80px;
@@ -11,10 +12,34 @@ header{
   letter-spacing: 1px;
   z-index: 1;
 }
-nav{
-  width: 60%;
+.header-hidden{
+  display: none;
+}
+.nav{
+  width: 50%;
+  padding: 0 5%;
   height: 80px;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-item{
+  background: transparent;
+  font-size: 16px;
+  color: white;
+  border: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  height: 25px;
+  width: 52px;
   justify-content: center;
   align-items: center;
+  transition: font-size 0.15s;
+}
+.nav-item:hover{
+  font-size: 15px;
+}
+.nav-item:active{
+  font-size: 16px;
 }

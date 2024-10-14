@@ -1,0 +1,69 @@
+.lista-catalogo{
+  display: flex;
+  width: 60%;
+  justify-content: flex-start;
+  gap: 45px;
+  min-height: 400px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.item-container{
+  width: 30%;
+  height: 400px;
+  background-color: rgba(128, 128, 128, 0.226);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px;
+  align-items:start;
+  color: white;
+}
+.img-catalogo{
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.img-catalogo-titulo{
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+.img-catalogo-categoria{
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 11px;
+  height: 32px;
+}
+.img-catalogo-precio{
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 13px;
+  height: 20px;
+}
+.btn-ver-mas{
+  display: flex;
+  width: 100%;
+  height: 35px;
+  background-color: blueviolet;
+  letter-spacing: 1px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+  transition: font-size 0.15s;
+}
+.btn-ver-mas h4{
+  font-weight: 500;
+}
+.btn-ver-mas:hover{
+  font-size: 14px;
+}
+.btn-ver-mas:active{
+  font-size: 15px;
+}

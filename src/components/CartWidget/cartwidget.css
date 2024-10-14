@@ -6,7 +6,7 @@
   align-items: center;
   position: relative;
 }
-.carrito-container img{
+.cartwidget-img{
   height: 37px;
   transition: height 0.15s;
 }
@@ -18,18 +18,18 @@
   right: 0;
   transition: font-size 0.15s, top 0.15s;
 }
-.carrito-container img:hover{
-  height: 38px;
+.cartwidget-img:hover{
+  height: 39px;
   cursor: pointer;
 }
-.carrito-container img:active{
+.cartwidget-img:active{
   height: 37px;
 }
-.carrito-container img:hover ~ .contador-prods{
-  font-size: 16px;
+.cartwidget-img:hover ~ .contador-prods{
+  font-size: 17px;
   top: 4px;
 }
-.carrito-container img:active ~ .contador-prods{
+.cartwidget-img:active ~ .contador-prods{
   font-size: 15px;
   top: 5px;
 }

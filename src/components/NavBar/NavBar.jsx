@@ -1,18 +1,21 @@
-import React from 'react'
-import './navbar.css'
-import Logo from '../Logo/Logo'
-import Lista from '../Lista/Lista'
-import CartWidget from '../CartWidget/CartWidget'
+import React, { useState } from 'react'
+import NavBarEstado from './NavBarEstado'
 
 const NavBar = ({  }) => {
+  const [ultimoScrollY, setUltimoScrollY] = useState(0)
+  const [oculto, setOculto] = useState(false)
+
+  const manejarScroll = () => {
+    if (scrollY < 95) {
+      setOculto(false);
+    } else if (scrollY > ultimoScrollY) {
+      setOculto(true);
+    }
+    setUltimoScrollY(window.scrollY)
+  }
+
   return (
-    <header>
-      <Logo titulo={'Warmasters Paradise'} tamano={'logo-mediano'}/>
-      <nav>
-        <Lista items={['Todos', 'Nuevos', 'Populares']} clase={'lista-nav'}/>
-      </nav>
-      <CartWidget />
-    </header>
+    <NavBarEstado manejarScroll={manejarScroll} ultimoScrollY={ultimoScrollY} oculto={oculto}/>
   )
 }
 
