@@ -1,6 +1,6 @@
 import React from 'react'
 import './inicio.css'
-import Prueba from '../../components/PruebaClases/Prueba.jsx'
+import Prueba from '../Pruebas/Prueba.jsx'
 import InicioControlador from '/src/pages/Inicio/InicioControlador.jsx'
 
 const Inicio = ({  }) => {
@@ -8,7 +8,6 @@ const Inicio = ({  }) => {
   return (
     <>
       <InicioControlador/>
-      <Prueba/>
     </>
   )
 }
