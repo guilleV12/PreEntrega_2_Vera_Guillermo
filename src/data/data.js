@@ -14,4 +14,14 @@ const catalogoJuegos = [
   {id: 6, nombre: 'Grand Theft Auto V', precio: 10000, src: GTAV, categoria: 'Accion e historia', stock: 9}
 ]
 
-export {catalogoJuegos}
+const getJuegos = (nombre) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(
+        nombre ? catalogoJuegos.filter(juego => juego.nombre.toLowerCase().includes(nombre.toString())) : catalogoJuegos
+      )
+    }, 2000);
+  })
+}
+
+export {getJuegos}

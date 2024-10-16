@@ -1,17 +1,12 @@
 import React from 'react'
-import backgroundImg from '../../assets/img/bg.jpg'
-import ItemListContainer from '../../components/ItemListContainer/ItemListContainer'
 import './inicio.css'
+import ItemListContainerWithHoc from '../../components/ItemListContainerWithHoc/ItemListContainerWithHoc'
 
-const InicioView = ({ listaJuegos }) => {
+const InicioView = ({ listaJuegos, cargando, titulo }) => {
   
   return (
     <div className='pagina-inicio'>
-
-      <img src={backgroundImg} className='inicio-img-bg'/>
-
-      <ItemListContainer titulo={'Coleccion de juegos'} items={listaJuegos}/>
-
+      <ItemListContainerWithHoc items={listaJuegos} cargando={cargando} titulo={titulo}/>
     </div>
   )
 }

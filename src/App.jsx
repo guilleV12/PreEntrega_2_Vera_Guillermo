@@ -1,18 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import Inicio from './pages/inicio/inicio'
-import Prueba from './pages/Pruebas/Prueba'
+import BG from './assets/img/bg.jpg'
 
 function App() {
-  const [inicio, setInicio] = useState(false)
-  const [prueba, setPrueba] = useState(true)
 
   return (
     <>
+      <img src={BG} className='img-bg' />
       <NavBar />
-      {inicio && <Inicio />}
-      {prueba && <Prueba />}
+      <div className="body-container">
+        <Inicio />
+      </div>
+      
     </>
   )
 }

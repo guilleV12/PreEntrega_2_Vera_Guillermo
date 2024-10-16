@@ -1,18 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../itemlistcontainer.css'
+import ItemView from './ItemView'
+import ItemDetailContainer from '../../ItemDetailContainer/ItemDetailContainer'
 
 const Item = ({ juego }) => {
   
+  const [verDetalles, setVerDetalles] = useState(false)
+
+  const manejarClick = () => {
+    setVerDetalles(!verDetalles)
+  }
+
   return (
-    <div className="item-container">
-      <img className='img-catalogo' src={juego.src} alt="" />
-      <h4 className='img-catalogo-titulo'>{juego.nombre}</h4>
-      <h5 className='img-catalogo-categoria'>{`Categorias: ${juego.categoria}.`}</h5>
-      <h5 className='img-catalogo-precio'>{`Precio: $${juego.precio}`}</h5>
-      <button className='btn-ver-mas'>
-        <h4>Ver mas +</h4>
-      </button>
-    </div>
+    <>
+      <ItemView juego={juego} manejarClick={manejarClick} verDetalles={verDetalles} setVerDetalles={setVerDetalles}/>
+      {verDetalles && <ItemDetailContainer manejarClick={manejarClick}/>}
+    </>
   )
 }
 
