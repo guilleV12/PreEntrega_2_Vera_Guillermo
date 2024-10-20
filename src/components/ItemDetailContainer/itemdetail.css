@@ -1,20 +1,74 @@
-.item-detail-container{
+.fondo-detail-container{
   display: flex;
-  position: fixed;
-  top: 100px;
-  right: 500px;
-  width: 500px;
-  height: 500px;
-  background-color: white;
-  z-index: 5;
-}
-.close-detail-container{
-  display: flex;
-  position: absolute;
+  position:fixed;
   top: 0;
+  left: 0;
   right: 0;
-  width: 50px;
-  height: 50px;
+  height: 100dvh;
+  background-color: rgba(128, 128, 128, 0.226);
+  backdrop-filter: blur(10px);
+  z-index: 5;
   justify-content: center;
   align-items: center;
+}
+.item-detail-container{
+  width: 60%;
+  height: 550px;
+  background-color: rgb(82, 10, 149);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 30px;
+  color: white;
+  letter-spacing: 1px;
+}
+.item-detail-container h1{
+  font-weight: 400;
+  font-size: 14px;
+}
+.detail-descripcion{
+  font-size: 15px;
+}
+.pre-detail-graph{
+  color: rgb(184, 184, 184);
+}
+.close-detail-container{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: width 0.15s, height 0.15s;
+}
+.close-detail-container:hover .img-close-detail{
+  width: 18px;
+  height: 18px;
+}
+.close-detail-container:active .img-close-detail{
+  width: 20px;
+  height: 20px;
+}
+.img-close-detail{
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+.banner-detail-container{
+  height: 55%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.spinner-details{
+  position: fixed;
+  z-index: 10;
+  top: 30%;
+  left: 43%;
 }

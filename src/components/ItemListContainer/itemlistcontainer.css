@@ -1,94 +1,66 @@
-.lista-catalogo{
+.main-container{
   display: flex;
-  width: 80%;
-  justify-content: flex-start;
-  gap: 45px;
-  min-height: 400px;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 160px;
   margin-bottom: 50px;
 }
+.item-list-container{
+  display: flex;
+  width: 80%;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
+}
+.item-list{
+  display: flex;
+  padding: 0 60px;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  gap: 5%;
+}
 .item-container{
+  display: flex;
   width: 30%;
-  height: 400px;
+  height: 50%;
+  z-index: 1;
+  flex-direction: column;
   background-color: rgba(128, 128, 128, 0.226);
   backdrop-filter: blur(10px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
   padding: 10px;
-  align-items:start;
   color: white;
+  justify-content: space-between;
 }
-.img-catalogo{
-  width: 100%;
+.item-img{
   height: 50%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
 }
-.img-catalogo-titulo{
+.item-paragraphs{
   font-weight: 500;
   letter-spacing: 1px;
-  line-height: 24px;
-}
-.img-catalogo-categoria{
-  font-weight: 400;
-  letter-spacing: 1px;
-  font-size: 11px;
-  height: 32px;
-}
-.img-catalogo-precio{
-  font-weight: 400;
-  letter-spacing: 1px;
-  font-size: 13px;
-  height: 20px;
-}
-.btn-ver-mas{
-  display: flex;
-  width: 100%;
-  height: 35px;
-  background-color: blueviolet;
-  letter-spacing: 1px;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: none;
   font-size: 15px;
+}
+.item-paragraphs-2{
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+.ver-detalles{
+  background-color: blueviolet;
+  font-size: 15px;
+  height: 23px;
+  width: 293px;
+  color: white;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
   transition: font-size 0.15s;
 }
-.btn-ver-mas h4{
-  font-weight: 500;
-}
-.btn-ver-mas:hover{
+.ver-detalles:hover{
   font-size: 14px;
 }
-.btn-ver-mas:active{
+.ver-detalles:active{
   font-size: 15px;
-}
-.loading-screen{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 10%;
-}
-.titulo-container{
-  display: flex;
-  color: white;
-  margin-bottom: 50px;
-  width: 100%;
-  padding-left: 10%
-}
-.inicio-title-span{
-  line-height: 45px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-size: 45px;
-  margin-right: 20px;
-  color: rgb(106, 106, 106);
-}
-.img-srch-filter{
-  width: 50px;
 }

@@ -1,8 +1,11 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const NavBarItem = ({ nombre }) => {
+const NavBarItem = ({ nombre, id }) => {
   return (
-    <button className="nav-item">{nombre}</button>
+    <NavLink to={`/Categoria/${id}`} className={({ isActive }) => (isActive ? 'active-link' : 'inactive-link')}>
+      <button className="nav-item">{nombre}</button>
+    </NavLink>
   )
 }
 

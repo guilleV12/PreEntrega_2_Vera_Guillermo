@@ -1,19 +1,22 @@
 import React from 'react'
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
-import Inicio from './pages/inicio/inicio'
-import BG from './assets/img/bg.jpg'
+import ItemListContainerWithHoc from './components/ItemListContainer/ItemListContainer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
 function App() {
 
   return (
     <>
-      <img src={BG} className='img-bg' />
-      <NavBar />
-      <div className="body-container">
-        <Inicio />
-      </div>
-      
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route exact path='/' element={<ItemListContainerWithHoc />} />
+          <Route exact path='/Categoria/:categoriaId' element={<ItemListContainerWithHoc />} />
+          <Route exact path='/Juego/:juegoId' element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
