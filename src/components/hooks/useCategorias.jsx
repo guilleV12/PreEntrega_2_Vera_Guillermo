@@ -6,7 +6,7 @@ const useCategorias = () => {
 
   useEffect(() => {
     getCategorias()
-    .then((data) => { setCategorias(data) })
+    .then((data) => {setCategorias(data)})
     .catch((error) => {console.log('Error: ' + error)})
   },[])
 

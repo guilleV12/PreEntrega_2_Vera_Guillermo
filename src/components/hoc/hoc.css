@@ -51,3 +51,9 @@
 .ordenar-precio:active{
   font-size: 14px;
 }
+.titulo-container{
+  position: absolute;
+  left: 415px;
+  top: 120px;
+  color: white;
+}
